@@ -36,7 +36,7 @@
       margin: 0;
       padding: 0;
       display: flex;
-      gap: 20px;
+      gap: 10px;
     }
 
     nav ul li {
@@ -70,37 +70,36 @@
     }
 
     @media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-  }
-  .menu.active {
-    display: flex;
-  }
-  .menu-icon {
-    display: block;
-  }
-}
-
+      .menu {
+        display: none;
+        flex-direction: column;
+      }
+      .menu.active {
+        display: flex;
+      }
+      .menu-icon {
+        display: block;
+      }
+    }
 
     .saree-container {
-  display: grid;
-  gap: 20px;
-  padding: 20px;
-  grid-template-columns: 1fr; /* Default: 1 column */
-}
+      display: grid;
+      gap: 20px;
+      padding: 20px;
+      grid-template-columns: 1fr; /* Default: 1 column */
+    }
 
-@media (max-width: 768px) {
-  .saree-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-  }
-}
+    @media (max-width: 768px) {
+      .saree-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+      }
+    }
 
-@media (min-width: 1024px) {
-  .saree-container {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
-  }
-}
+    @media (min-width: 1024px) {
+      .saree-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+      }
+    }
 
     .saree-item {
       border: 2px solid #ddd;
@@ -149,18 +148,6 @@
 
     .quick-view:hover {
       background-color: #ff4500;
-    }
-
-    @media (max-width: 768px) {
-      .saree-container {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .saree-container {
-        grid-template-columns: repeat(4, 1fr);
-      }
     }
 
     footer {
@@ -240,22 +227,48 @@
       <h3>Mysore Silk Saree</h3>
       <button class="quick-view" onclick="window.location.href='details-mysore.html'">Quick View</button>
     </div>
-    <!-- Assam Silk Saree -->
+    <!-- New 6 Images -->
+    <!-- Image 1 -->
     <div class="saree-item">
-      <img src="https://via.placeholder.com/200x300" alt="Assam Silk Saree">
-      <h3>Assam Silk Saree</h3>
-      <button class="quick-view" onclick="window.location.href='details-assam.html'">Quick View</button>
+      <img src="https://via.placeholder.com/200x300" alt="Saree 1">
+      <h3>Saree 1</h3>
+      <button class="quick-view" onclick="window.location.href='details-saree1.html'">Quick View</button>
     </div>
-    <!-- Chiffon Saree -->
+    <!-- Image 2 -->
     <div class="saree-item">
-      <img src="https://via.placeholder.com/200x300" alt="Chiffon Saree">
-      <h3>Chiffon Saree</h3>
-      <button class="quick-view" onclick="window.location.href='details-chiffon.html'">Quick View</button>
+      <img src="https://via.placeholder.com/200x300" alt="Saree 2">
+      <h3>Saree 2</h3>
+      <button class="quick-view" onclick="window.location.href='details-saree2.html'">Quick View</button>
+    </div>
+    <!-- Image 3 -->
+    <div class="saree-item">
+      <img src="https://via.placeholder.com/200x300" alt="Saree 3">
+      <h3>Saree 3</h3>
+      <button class="quick-view" onclick="window.location.href='details-saree3.html'">Quick View</button>
+    </div>
+    <!-- Image 4 -->
+    <div class="saree-item">
+      <img src="https://via.placeholder.com/200x300" alt="Saree 4">
+      <h3>Saree 4</h3>
+      <button class="quick-view" onclick="window.location.href='details-saree4.html'">Quick View</button>
+    </div>
+    <!-- Image 5 -->
+    <div class="saree-item">
+      <img src="https://via.placeholder.com/200x300" alt="Saree 5">
+      <h3>Saree 5</h3>
+      <button class="quick-view" onclick="window.location.href='details-saree5.html'">Quick View</button>
+    </div>
+    <!-- Image 6 -->
+    <div class="saree-item">
+      <img src="https://via.placeholder.com/200x300" alt="Saree 6">
+      <h3>Saree 6</h3>
+      <button class="quick-view" onclick="window.location.href='details-saree6.html'">Quick View</button>
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2024 Saree Collection | <a href="contact.html" aria-label="Contact">Contact</a></p>
+    <p>&copy; 2024 Saree Collection. All rights reserved.</p>
+    <p>Visit our <a href="https://www.instagram.com">Instagram</a> for more updates.</p>
   </footer>
 </body>
 </html>
