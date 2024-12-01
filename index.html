@@ -69,11 +69,38 @@
       transform-origin: bottom left;
     }
 
+    @media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+  }
+  .menu.active {
+    display: flex;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+
+
     .saree-container {
-      display: grid;
-      gap: 20px;
-      padding: 20px;
-    }
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: 1fr; /* Default: 1 column */
+}
+
+@media (max-width: 768px) {
+  .saree-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .saree-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+  }
+}
 
     .saree-item {
       border: 2px solid #ddd;
@@ -173,19 +200,19 @@
     </div>
     <!-- Chenderi Saree -->
     <div class="saree-item">
-      <img src="https://via.placeholder.com/200x300" alt="Chenderi Saree">
+      <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-92a1d.appspot.com/o/chenderi-2.jpg?alt=media&token=4631321d-f7ad-492e-ac6b-1c87627530bf" alt="Chenderi Saree">
       <h3>Chenderi Saree</h3>
       <button class="quick-view" onclick="window.location.href='details-chenderi.html'">Quick View</button>
     </div>
     <!-- Tusser Saree -->
     <div class="saree-item">
-      <img src="https://via.placeholder.com/200x300" alt="Tusser Saree">
+      <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-92a1d.appspot.com/o/Tusser-2.jpg?alt=media&token=bcd2bd5a-b72a-4d05-a2b9-bd8a08a27cd4" alt="Tusser Saree">
       <h3>Tusser Saree</h3>
       <button class="quick-view" onclick="window.location.href='details-tusser.html'">Quick View</button>
     </div>
     <!-- Bangalore Silks Saree -->
     <div class="saree-item">
-      <img src="https://via.placeholder.com/200x300" alt="Bangalore Silks Saree">
+      <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-92a1d.appspot.com/o/banglore-silks-1.jpg?alt=media&token=1ecb3bd6-8ed4-4456-a729-dbf6f839bcff" alt="Bangalore Silks Saree">
       <h3>Bangalore Silks Saree</h3>
       <button class="quick-view" onclick="window.location.href='details-bangalore.html'">Quick View</button>
     </div>
