@@ -8,198 +8,161 @@
   <meta property="og:title" content="Saree Collection">
   <meta property="og:description" content="Explore a wide variety of sarees including Pattu, Chenderi, Tusser, and Bangalore Silks. Find the perfect saree for any occasion.">
   <title>Saree Collection</title>
-
   <style>
-    /* Global Styles */
     body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font: 1em 'Open Sans', sans-serif;
+      box-sizing: border-box;
+      background-color: #f5f5f5;
+      color: black;
+      font-weight: bolder;
     }
 
     nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: orangered;
     }
 
     nav img {
-        height: 50px; /* Logo size */
+      height: 50px;
     }
 
     nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 20px;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
     }
 
     nav ul li {
-        position: relative;
+      position: relative;
     }
 
     nav ul li a {
-        color: white;
-        text-decoration: none;
-        padding: 14px;
-        display: block;
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+      position: relative;
     }
 
     nav ul li a::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #ff6347;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 0.3s ease-out;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ff6347;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease-out;
     }
 
     nav ul li a:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-
-    .back-btn {
-        margin: 20px;
-        font-size: 18px;
-        background-color: #ff6347;
-        color: white;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-    }
-
-    .back-btn:hover {
-        background-color: #ff4500;
-    }
-
-    .back-btn svg {
-        margin-right: 10px;
+      transform: scaleX(1);
+      transform-origin: bottom left;
     }
 
     .saree-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 20px;
+      display: grid;
+      gap: 20px;
+      padding: 20px;
     }
 
     .saree-item {
-        position: relative;
-        overflow: hidden;
-        border: 2px solid #ddd;
-        transition: all 0.3s ease;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .saree-item:hover {
+      transform: translateY(-5px);
     }
 
     .saree-item img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        transition: transform 0.3s ease;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 2 / 3; /* Ensures the aspect ratio is maintained */
+      transition: transform 0.3s ease;
     }
 
     .saree-item:hover img {
-        transform: scale(1.1);
+      transform: scale(1.1);
     }
 
     .saree-item h3 {
-        margin-bottom: 10px;
+      margin: 10px;
     }
 
     .quick-view {
-        padding: 10px 20px;
-        background-color: #ff6347;
-        border: none;
-        color: white;
-        cursor: pointer;
-        margin-top: auto;
-        text-align: center;
+      padding: 10px 20px;
+      background-color: #ff6347;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: block;
+      margin: 10px auto 20px;
+      text-align: center;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
 
     .quick-view:hover {
-        background-color: #ff4500;
+      background-color: #ff4500;
     }
 
     @media (max-width: 768px) {
-        .saree-container {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .saree-item img {
-            aspect-ratio: 1 / 1;
-        }
+      .saree-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (min-width: 1024px) {
-        .saree-container {
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        .saree-item img {
-            aspect-ratio: 1 / 1;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .saree-container {
-            grid-template-columns: 1fr;
-        }
-
-        .saree-item img {
-            aspect-ratio: 4 / 3;
-        }
+      .saree-container {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
 
     footer {
-        background-color: #333;
-        color: white;
-        padding: 20px;
-        text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
     }
 
     footer a {
-        color: #ff6347;
-        text-decoration: none;
+      color: #ff6347;
+      text-decoration: none;
     }
 
     footer a:hover {
-        text-decoration: underline;
+      text-decoration: underline;
     }
-
   </style>
 </head>
 <body>
-
-  <!-- Navigation -->
   <nav>
     <img src="https://via.placeholder.com/150" alt="Logo" aria-label="Saree Collection Logo">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="awards.html">Awards</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" aria-label="Home">Home</a></li>
+      <li><a href="about.html" aria-label="About">About</a></li>
+      <li><a href="awards.html" aria-label="Awards">Awards</a></li>
+      <li><a href="contact.html" aria-label="Contact">Contact</a></li>
     </ul>
   </nav>
-
-  <!-- Back Button -->
-  <button class="back-btn" onclick="window.history.back();">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M20 12H4M4 12l8 8M4 12l8-8"></path></svg>
-    Back
-  </button>
 
   <div class="saree-container">
     <!-- Pattu Saree -->
@@ -208,33 +171,64 @@
       <h3>Pattu Saree</h3>
       <button class="quick-view" onclick="window.location.href='details-pattu.html'">Quick View</button>
     </div>
-
     <!-- Chenderi Saree -->
     <div class="saree-item">
-      <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-92a1d.appspot.com/o/Chenderi-1.jpg?alt=media&token=acfbe53b-b52d-4a4b-a6a7-27a6a08787bb" alt="Chenderi Saree">
+      <img src="https://via.placeholder.com/200x300" alt="Chenderi Saree">
       <h3>Chenderi Saree</h3>
       <button class="quick-view" onclick="window.location.href='details-chenderi.html'">Quick View</button>
     </div>
-
     <!-- Tusser Saree -->
     <div class="saree-item">
-      <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-92a1d.appspot.com/o/Tusser-main.jpg?alt=media&token=b0598a72-6de4-4965-a255-23abf7b2dd92" alt="Tusser Saree">
+      <img src="https://via.placeholder.com/200x300" alt="Tusser Saree">
       <h3>Tusser Saree</h3>
       <button class="quick-view" onclick="window.location.href='details-tusser.html'">Quick View</button>
     </div>
-
-    <!-- Banglore Silks Saree -->
+    <!-- Bangalore Silks Saree -->
     <div class="saree-item">
-      <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-92a1d.appspot.com/o/banglore-silks-main.jpg?alt=media&token=ff0c6247-92b2-4a22-a557-b70373c334cf" alt="Banglore Silks Saree">
-      <h3>Banglore Silks Saree</h3>
-      <button class="quick-view" onclick="window.location.href='details-banglore-silks.html'">Quick View</button>
+      <img src="https://via.placeholder.com/200x300" alt="Bangalore Silks Saree">
+      <h3>Bangalore Silks Saree</h3>
+      <button class="quick-view" onclick="window.location.href='details-bangalore.html'">Quick View</button>
+    </div>
+    <!-- Kanjivaram Saree -->
+    <div class="saree-item">
+      <img src="https://via.placeholder.com/200x300" alt="Kanjivaram Saree">
+      <h3>Kanjivaram Saree</h3>
+      <button class="quick-view" onclick="window.location.href='details-kanjivaram.html'">Quick View</button>
+    </div>
+    <!-- Banarasi Saree -->
+    <div class="saree-item">
+      <img src="https://via.placeholder.com/200x300" alt="Banarasi Saree">
+      <h3>Banarasi Saree</h3>
+      <button class="quick-view" onclick="window.location.href='details-banarasi.html'">Quick View</button>
+    </div>
+    <!-- Patola Saree -->
+    <div class="saree-item">
+      <img src="https://via.placeholder.com/200x300" alt="Patola Saree">
+      <h3>Patola Saree</h3>
+      <button class="quick-view" onclick="window.location.href='details-patola.html'">Quick View</button>
+    </div>
+    <!-- Mysore Silk Saree -->
+    <div class="saree-item">
+      <img src="https://via.placeholder.com/200x300" alt="Mysore Silk Saree">
+      <h3>Mysore Silk Saree</h3>
+      <button class="quick-view" onclick="window.location.href='details-mysore.html'">Quick View</button>
+    </div>
+    <!-- Assam Silk Saree -->
+    <div class="saree-item">
+      <img src="https://via.placeholder.com/200x300" alt="Assam Silk Saree">
+      <h3>Assam Silk Saree</h3>
+      <button class="quick-view" onclick="window.location.href='details-assam.html'">Quick View</button>
+    </div>
+    <!-- Chiffon Saree -->
+    <div class="saree-item">
+      <img src="https://via.placeholder.com/200x300" alt="Chiffon Saree">
+      <h3>Chiffon Saree</h3>
+      <button class="quick-view" onclick="window.location.href='details-chiffon.html'">Quick View</button>
     </div>
   </div>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Saree Collection. All rights reserved. <br> <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+    <p>&copy; 2024 Saree Collection | <a href="contact.html" aria-label="Contact">Contact</a></p>
   </footer>
-
 </body>
 </html>
